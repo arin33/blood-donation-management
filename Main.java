@@ -14,7 +14,7 @@ package com.techwebdocs.main;
 import java.util.*;
 
 class Main {
-    // Class to represent a donor
+  
     static class Donor {
         String name;
         String bloodGroup;
@@ -50,10 +50,10 @@ class Main {
             System.out.print("Choose an option: ");
 
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine(); 
 
             switch (choice) {
-                case 1: // Add Donor
+                case 1: 
                     System.out.print("Enter Name: ");
                     String name = scanner.nextLine();
                     System.out.print("Enter Blood Group: ");
@@ -66,7 +66,7 @@ class Main {
                     System.out.println("Donor added successfully!");
                     break;
 
-                case 2: // Search Donor by Blood Group
+                case 2: 
                     System.out.print("Enter Blood Group to Search: ");
                     String searchGroup = scanner.nextLine();
                     boolean found = false;
@@ -81,7 +81,7 @@ class Main {
                     }
                     break;
 
-                case 3: // Display All Donors
+                case 3:
                     if (donors.isEmpty()) {
                         System.out.println("No donors available.");
                     } else {
@@ -92,7 +92,7 @@ class Main {
                     }
                     break;
 
-                case 4: // Delete a Donor
+                case 4: 
                     System.out.print("Enter Name of Donor to Delete: ");
                     String deleteName = scanner.nextLine();
                     Iterator<Donor> iterator = donors.iterator();
@@ -111,7 +111,7 @@ class Main {
                     }
                     break;
 
-                case 5: // Update Donor Information
+                case 5: 
                     System.out.print("Enter Name of Donor to Update: ");
                     String updateName = scanner.nextLine();
                     boolean updated = false;
@@ -133,7 +133,7 @@ class Main {
                     }
                     break;
 
-                case 6: // Count Donors by Blood Group
+                case 6: 
                     System.out.print("Enter Blood Group to Count: ");
                     String countGroup = scanner.nextLine();
                     int count = 0;
@@ -145,7 +145,7 @@ class Main {
                     System.out.println("Number of donors with blood group " + countGroup + ": " + count);
                     break;
 
-                case 7: // Exit
+                case 7:
                     System.out.println("Exiting Blood Management System. Goodbye!");
                     scanner.close();
                     return;
